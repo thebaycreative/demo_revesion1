@@ -3,250 +3,174 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>B & M | Real Estate & Architectural Photography</title>
+    <title>Smash Brothers | Burgers & Beer</title>
     <style>
         /* Base Styles */
-        :root {
-            --primary-color: #1a1a1a;
-            --accent-color: #d4af37; /* Subtle gold for a premium feel */
-            --text-color: #333;
-            --bg-color: #f9f9f9;
-        }
-        
-        * {
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-        }
-        
-        body {
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            line-height: 1.6;
+            background-color: #fcf9f2;
+            color: #2c2c2c;
+            text-align: center;
         }
 
-        /* Navigation */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem 5%;
-            background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+        /* Header & Logo Placeholder */
+        header {
+            padding: 3rem 1rem;
+            background-color: #1a1a1a;
+            color: #fff;
         }
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            text-decoration: none;
-            letter-spacing: 1px;
+        .logo-container {
+            display: inline-block;
+            border: 2px dashed #f39c12;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            max-width: 300px;
         }
 
-        .nav-links a {
-            margin-left: 2rem;
-            text-decoration: none;
-            color: var(--primary-color);
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent-color);
+        .logo-text {
+            font-size: 0.9rem;
+            color: #f39c12;
+            font-style: italic;
         }
 
         /* Hero Section */
         .hero {
-            height: 80vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=80') center/cover;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: #fff;
-            padding: 0 20px;
+            padding: 4rem 1rem;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            font-weight: 300;
+            font-size: 4rem;
+            margin: 0 0 1rem 0;
+            color: #d35400;
+            text-transform: uppercase;
             letter-spacing: 2px;
         }
 
-        .hero p {
+        .hero h2 {
+            font-size: 1.8rem;
+            margin: 0 0 1rem 0;
+            font-weight: 600;
+        }
+
+        .coming-soon {
+            display: inline-block;
+            background-color: #d35400;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
             font-size: 1.2rem;
-            margin-bottom: 2rem;
-            max-width: 600px;
-            font-weight: 300;
+            font-weight: bold;
+            margin-top: 1rem;
         }
 
-        .btn {
-            padding: 12px 30px;
-            background-color: var(--accent-color);
-            color: #fff;
-            text-decoration: none;
+        /* Content Section */
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            line-height: 1.6;
             font-size: 1.1rem;
-            border-radius: 3px;
-            transition: background 0.3s;
         }
 
-        .btn:hover {
-            background-color: #b5952f;
-        }
-
-        /* Services Section */
-        .services {
-            padding: 5rem 5%;
-            text-align: center;
-            background: #fff;
-        }
-
-        .section-title {
-            font-size: 2.2rem;
-            margin-bottom: 3rem;
-            color: var(--primary-color);
-            font-weight: 400;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        .highlights {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 2rem;
+            margin: 3rem 0;
         }
 
-        .service-card {
+        .card {
+            background: white;
             padding: 2rem;
-            background: var(--bg-color);
-            border-radius: 5px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            flex: 1;
+            min-width: 250px;
         }
 
-        .service-card h3 {
-            margin-bottom: 1rem;
-            color: var(--primary-color);
+        .card h3 {
+            color: #d35400;
+            margin-top: 0;
         }
 
-        /* Portfolio Section */
-        .portfolio {
-            padding: 5rem 5%;
+        /* Location Section */
+        .location {
+            background-color: #e8e3d8;
+            padding: 3rem 1rem;
+            margin-top: 2rem;
         }
 
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
+        .location h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
         }
 
-        .portfolio-item {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 5px;
-            transition: transform 0.3s ease;
+        .address {
+            font-size: 1.2rem;
+            font-weight: bold;
         }
 
-        .portfolio-item:hover {
-            transform: scale(1.02);
-        }
-
-        /* Contact & Footer */
-        .contact {
-            background-color: var(--primary-color);
-            color: #fff;
-            text-align: center;
-            padding: 5rem 5%;
-        }
-
-        .contact p {
-            margin: 1rem 0;
-            font-size: 1.1rem;
-        }
-
-        .contact a {
-            color: var(--accent-color);
-            text-decoration: none;
-        }
-
+        /* Footer */
         footer {
-            background-color: #111;
+            background-color: #1a1a1a;
             color: #888;
-            text-align: center;
             padding: 1.5rem;
             font-size: 0.9rem;
-        }
-
-        /* Mobile Adjustments */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .nav-links { display: none; /* Can add a hamburger menu later if needed */ }
         }
     </style>
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav>
-        <a href="#" class="logo">B & M</a>
-        <div class="nav-links">
-            <a href="#services">Services</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
+    <!-- Header & Logo -->
+    <header>
+        <div class="logo-container">
+            <!-- Replace this div with your actual image tag once the logo is ready: -->
+            <!-- <img src="your-logo.png" alt="Smash Brothers Logo" style="max-width: 100%;"> -->
+            <div class="logo-text">
+                [Minimalistic Line Art Logo Placeholder]<br><br>
+                Two men drinking and having burgers
+            </div>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="hero">
-        <h1>Capturing the South Bay.</h1>
-        <p>Premium Real Estate & Architectural Photography and Marketing to make your listings stand out.</p>
-        <a href="#contact" class="btn">Book a Shoot</a>
     </header>
 
-    <!-- Services -->
-    <section id="services" class="services">
-        <h2 class="section-title">What We Do</h2>
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>High-End Photography</h3>
-                <p>Crisp, perfectly lit interior and exterior shots that showcase the true potential of your property.</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Smash Brothers</h1>
+        <h2>Specialty Burgers & Craft Beer</h2>
+        <div class="coming-soon">Grand Opening: July 2026</div>
+    </section>
+
+    <!-- Info Section -->
+    <section class="content">
+        <p>Get ready for the ultimate burger experience. We're bringing crispy edges, juicy patties, and the coldest draft beer in town right to San Jose.</p>
+        
+        <div class="highlights">
+            <div class="card">
+                <h3>🍔 Specialty Smash Burgers</h3>
+                <p>Perfectly caramelized, pressed to perfection, and stacked high with fresh ingredients and our house-made sauces.</p>
             </div>
-            <div class="service-card">
-                <h3>Drone & Aerial</h3>
-                <p>Stunning aerial perspectives to highlight lot size, neighborhood layout, and surrounding landscapes.</p>
-            </div>
-            <div class="service-card">
-                <h3>Twilight Photography</h3>
-                <p>Eye-catching dusk photos that create an emotional connection and make your listing glow.</p>
+            <div class="card">
+                <h3>🍺 Wide Range on Tap</h3>
+                <p>From hoppy IPAs to smooth stouts, we have a constantly rotating selection of craft beers poured straight from the tap.</p>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio -->
-    <section id="portfolio" class="portfolio">
-        <h2 class="section-title" style="text-align: center;">Recent Work</h2>
-        <div class="portfolio-grid">
-            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Modern Home Exterior" class="portfolio-item">
-            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=800&q=80" alt="Luxury Interior" class="portfolio-item">
-            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80" alt="Bright Living Room" class="portfolio-item">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Modern Kitchen" class="portfolio-item">
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="contact">
-        <h2 class="section-title" style="color: #fff;">Let's Work Together</h2>
-        <p>Ready to elevate your next listing?</p>
-        <p>Email us at: <a href="mailto:hello@bmphotography.com">hello@bmphotography.com</a></p>
-        <p>Call us: (408) 555-0199</p>
+    <!-- Location -->
+    <section class="location">
+        <h3>Come Hang With Us</h3>
+        <p class="address">1640 Oakland Road<br>San Jose, CA</p>
+        <p><em>Just getting the grills ready. See you in July 2026!</em></p>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 B & M Photography & Marketing. All rights reserved.</p>
+        &copy; 2026 Smash Brothers. All rights reserved.
     </footer>
 
 </body>
